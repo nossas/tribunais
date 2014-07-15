@@ -1,0 +1,182 @@
+body
+  color: white
+  text-align: center
+  font-family: "Proxima Nova Soft"
+
+footer
+  background: $pink
+  text-align: left
+  padding: 0 0 3em 0
+
+h2, h3
+  font-family: "Brush Up"
+  color: $yellow
+  text-transform: uppercase
+  span
+    color: white
+
+h2
+  font-size: 2.5em
+
+h3
+  font-size: 2em
+
+a
+  color: white
+  text-decoration: underline
+  font-weight: bold
+  &:hover
+    color: $light-gray
+
+p.lead
+  color: $yellow
+  font-size: 1em
+
+.button
+  text-transform: uppercase
+
+.button.facebook-share, .button.facebook-link
+  background: $facebook-blue
+
+.button.twitter-share
+  background: $twitter-blue
+
+.wraper
+  +grid-column(12)
+
+.box
+  background: rgba(0, 0, 0, .75)
+  padding: 1em
+
+.slide-1
+  background: asset-url("slide-1-bg.jpg") top center
+  .minha-sampa
+    text-align: left
+  .minha-sampa, .counter
+    +grid-column(6)
+    margin-bottom: 1.5em
+  .counter
+    .digits-and-text
+      float: right
+      .digits, .text
+        float: left
+      .digits
+        margin-right: .5em
+      span.digit
+        background: asset-url("counter-bg.png")
+        margin-right: 2px
+        display: inline-block
+        width: 32px
+        line-height: 39px
+        font-weight: 900
+        font-size: 1.75em
+        &:last-child
+          margin-right: 0
+      .text
+        text-transform: uppercase
+        line-height: 19px
+        text-align: left
+
+.slide-1, .slide-2
+  padding: 1em 0 3em 0
+
+.slide-2
+  background: asset-url("slide-2-bg.jpg") left 40%
+
+.slide-3
+  background: $pink
+  padding: 6em 0 8em 0
+  .title
+    +grid-column(4)
+    text-align: right
+  .text
+    +grid-column(8)
+    text-align: left
+
+.close-reveal-modal
+  text-decoration: none
+
+#preview_email.reveal-modal
+  text-align: center
+  background: $yellow
+  .close-reveal-modal
+    color: black
+  p
+    color: black
+    font-size: 1.1em
+  p.lead
+    color: lighten($yellow, 45%)
+    font-weight: bold
+    text-transform: uppercase
+    text-align: left
+    font-size: 1.5em
+
+.close-reveal-modal
+  text-decoration: none
+
+#gandalf.reveal-modal
+  background: none !important
+  border: none !important
+
+#share, #victory
+  p, a.link
+    color: #333
+    &.phone
+      font-family: "Brush Up"
+      font-size: 2.5em
+  .button
+    margin: 0
+  .facebook-share
+    margin-right: 1em
+
+form
+  background: asset-url("bg-form.png") center center
+  padding: 1.6em 1em 2em 1em
+  margin-bottom: 1em
+  +grid-column(12)
+  .button
+    width: 100%
+    text-transform: uppercase
+  .first_name_field, .last_name_field, .email_field, .submit_button
+    +grid-column(3)
+    input
+      margin: 0
+    &.error
+      input
+        border-color: red
+  .submit_button
+    input
+      font-family: inherit
+      padding: .5em
+
+
+@media (max-width: 900px)
+  .slide-1
+    .minha-sampa, .counter
+      +grid-column(12)
+      text-align: center
+      .digits-and-text
+        float: none
+        .digits, .text
+          float: none
+          text-align: center
+        .digits
+          margin-bottom: 1em
+
+  .slide-3
+    .title, .text
+      +grid-column(12)
+      text-align: center
+
+@media (max-width: 750px)
+  form
+    background: $form-bg
+    +grid-column(6, true, true)
+    .first_name_field, .last_name_field, .email_field, .submit_button
+      +grid-column(12)
+    .first_name_field, .last_name_field, .email_field
+      margin-bottom: 1em
+
+@media (max-width: 500px)
+  form
+    +grid-column(8, true, true)
