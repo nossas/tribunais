@@ -6,7 +6,21 @@ class Poke < ActiveRecord::Base
   after_create { self.delay.add_to_accounts_segment }
 
   def self.create_from_user params
-    user = User.find_by_email(params[:email])
+    if user = User.find_by_email(params[:email])
+      begin
+        url = "#{ENV["ACCOUNTS_HOST"]}/users/#{self.user_id}/memberships.json"
+        body = {
+          token: ENV["ACCOUNTS_API_TOKEN"],
+          membership: {
+            organization_id: Organization.find_by_slug('meurio').id
+          }
+        }
+        HTTParty.post(url, body: body.to_json, headers: { 'Content-Type' => 'application/json' })
+      rescue Exception => e
+        logger.error e.message
+      end
+    end
+
     user = User.create(params) if user.nil?
     Poke.where("user_id = ?", user.id).first_or_create(user_id: user.id)
   end
