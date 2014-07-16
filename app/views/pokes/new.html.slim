@@ -2,7 +2,7 @@
   .row
     .title
       h2 Você sabia que no Brasil você ainda pode ser julgado por um tribunal militar?
-      strong #desmilitarizacaodajustica
+      strong #DesmilitarizacaoDaJustica
     .text
       p Apesar de vivermos em uma democracia,  qualquer cidadão civil pode virar reú da justiça militar, caso seja acusado de desacato ou outras formas de insubordinação contra membros das forças armadas.
       p A boa notícia é que a Procuradoria Geral da República acaba de entrar com uma ação no Supremo Tribunal Federal para acabar com esse absurdo. E o voto do STF deve ocorrer ainda esse ano!
@@ -56,21 +56,22 @@
 /       p Essa mobilização foi criada por um grupo de cidadãos paulistanos (de certidão ou de coração) que acreditam na participação cidadã e na união de muitas pessoas como instrumento para criação de uma cidade melhor. Em breve, lançaremos o Minha Sampa, organização que será dedicada a fomentar uma rede de entusiastas de São Paulo que querem participar ativamente da construção de uma cidade mais inclusiva, participativa, e gostosa de se viver. Nessa empreitada, estamos sendo apoiados pela equipe do Meu Rio, que já faz um trabalho lindo no Rio de Janeiro.
 /       p Não tínhamos planejado lançar essa mobilização antes do Minha Sampa sair do forno. Mas resolvemos que não podíamos ficar calados. Primeiro, porque os casos de abuso sexual em espaços públicos são uma grande ameaça a um uso verdadeiramente democrático da cidade e sua infraestrutura, e, por isso, deveriam ser uma prioridade para todos aqueles que desejam uma São Paulo melhor. Segundo, porque acreditamos que recursos públicos podem e devem ser destinados a causas públicas. Verbas de comunicação costumam ser usadas para fins políticos eleitorais, e isso não é legal. Vemos nessa mobilização a oportunidade de envolver todos os paulistanos e paulistanas na definição de como os nossos recursos de comunicação são usados. E contamos com você. Envie seu email de pressão ao presidente do Metrô agora.
 /
-#preview_email.medium.reveal-modal{data-reveal=true}
-  p.lead Caro Sr. Luiz Antonio Carvalho Pacheco,
-  p Em sua nota pública sobre a terrível propaganda veículada pela rádio transamérica, - que já foi retirada de circulação, mas teria sido paga com dinheiro do contribuinte -, o senhor afirmou que repudia o conteúdo da peça publicitária. No entanto, isso não basta!
-  p A epidemia de abuso sexual dentro dos vagões e estações do Metrô é o tipo de problema grave que deve ser combatido com todo empenho e repertório de instrumentos que o senhor dispõe. Um deles é justamente o que foi usado na propaganda, que  é sua verba de comunicação. Até agora, ela tem sido utilizada para fazer transmitir muitos auto-elogios, mas muito pouca informação.
-  p Para mostrar sua vontade genuína em diminuir a incidência desse tipo de crime, que tal criar uma campanha massiva de educação e prevenção contra abusos sexuais no Metrô de São Paulo? Tenho certeza de que, assim como eu, milhares de paulistanos sentiriam a valorização de sua cidadania e de um espaço público que é de todos nós.
-  p Fico no aguardo de sua resposta!
+#preview_email.small.reveal-modal{data-reveal=true}
+  p
+    strong Exmo(a). Sr(a). Ministro(a) do Supremo Tribunal Federal,
+  p Nos próximos dias, Vossa Excelência votará a ADPF 289, que argui a inconstitucionalidade do julgamento de civis por tribunais militares.
+  p Em estados como Rio de Janeiro, Bahia e Pernambuco, onde a presença de tropas militares no papel de força de segurança pública tem sido cada vez mais comum, essa possibilidade representa um perigo inestimável para a cidadania dos brasileiros.
+  p Além de violar o princípio básico de imparcialidade, o julgamento de um civil por um tribunal militar é feito com base no Código Penal Militar de 1969. Isso representa uma afronta ao processo de democratização e a todos aqueles que repudiam os resquícios de Ditadura em nosso sistema judiciário!
+  p Para o povo brasileiro, a ADPF 289 é imprescindível, pois já passou da hora de declarar inconstitucional a submissão de civis a tribunais militares!
+  p Responda publicamente a essa demanda enviando um e-mail para resposta@paneladepressao.org.br
   a class="close-reveal-modal" &#215;
 
 #share.medium.reveal-modal{data-reveal=true}
-  h3 Valeu! Agora que você já mandou seu e-mail, que tal aumentar ainda mais a pressão e falar com o Metrô por telefone também?
-  p Esse é o número do gabinete do presidente do Metrô. Dê uma ligada pra ele e diga que desculpas vazias não são suficientes. Exija também que eles façam a maior campanha de prevenção do abuso sexual já vista em São Paulo.
-  p.phone 11 3291-2802
-  p Depois de ligar não esqueça de compartilhar a mobilização com seus amigos.
-  = link_to "Compartilhe no Facebook", "https://www.facebook.com/sharer/sharer.php?u=#{URI::encode(root_url)}", class: ["button", "facebook-share"]
-  = link_to "Compartilhe no Twitter", "https://twitter.com/share?url=#{URI::encode('http:bit.ly/nãopassarão')}&text=#{URI::encode(t('share.twitter.tweet'))}&hashtags=#{URI::encode('abusadoresnãopassarão')}", class: ["button", "twitter-share"]
+  h3 O primeiro passo da missão acaba de ser enviado para o seu email
+  p Precisamos unir forças e preparar uma mobilização histórica para pressionar os ministros do STF na semana do voto. Compartilhe essa página com pessoas que você acredita que gostariam de fazer parte dessa rede de mobilizadores.
+  .share-buttons
+    = link_to "Compartilhe no Facebook", "https://www.facebook.com/sharer/sharer.php?u=#{URI::encode(root_url)}", class: ["button", "facebook-share"]
+    = link_to "Compartilhe no Twitter", "https://twitter.com/share?url=#{URI::encode('http:bit.ly/nãopassarão')}&text=#{URI::encode(t('share.twitter.tweet'))}&hashtags=#{URI::encode('abusadoresnãopassarão')}", class: ["button", "twitter-share"]
   a.close-reveal-modal &#215;
 /
 / #gandalf.medium.reveal-modal{data-reveal=true}

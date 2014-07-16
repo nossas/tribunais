@@ -54,12 +54,14 @@ p.lead
 
 .slide-1
   background: asset-url("slide-1-bg.jpg") top center
-  padding-top: 3em
-  padding-bottom: 3em
+  padding-top: 4em
+  padding-bottom: 4em
   .title
     text-align: right
     h2
       margin-bottom: 1em
+  .email_message
+    text-align: right
   .counter
     .digits-and-text
       float: right
@@ -97,29 +99,11 @@ p.lead
 .close-reveal-modal
   text-decoration: none
 
-#preview_email.reveal-modal
-  text-align: center
-  background: $yellow
-  .close-reveal-modal
-    color: black
-  p
-    color: black
-    font-size: 1.1em
-  p.lead
-    color: lighten($yellow, 45%)
-    font-weight: bold
-    text-transform: uppercase
-    text-align: left
-    font-size: 1.5em
-
-.close-reveal-modal
-  text-decoration: none
-
 #gandalf.reveal-modal
   background: none !important
   border: none !important
 
-#share, #victory
+#share, #victory, #preview_email
   p, a.link
     color: #333
     &.phone
@@ -129,6 +113,11 @@ p.lead
     margin: 0
   .facebook-share
     margin-right: 1em
+  .share-buttons
+    text-align: center
+  strong
+    color: inherit
+    font-size: 1em
 
 form
   background: $blue-dark
@@ -144,9 +133,9 @@ form
     &.error
       input
         border-color: red
-  .first_name_field, .last_name_field
+  .email_field, .last_name_field
     +grid-column(3)
-  .email_field
+  .first_name_field
     +grid-column(2)
   .submit_button
     +grid-column(4)
@@ -158,12 +147,18 @@ form
 
 @media (max-width: 900px)
   .slide-1
+    .email_message
+      text-align: center
     .text, .title
       +grid-column(12)
       text-align: center
     .title
       h2, strong
         margin-bottom: 1em
+
+  #share
+    .facebook-share
+      margin: 0 0 1em 0
 
   .slide-3
     .title, .text
