@@ -49,4 +49,5 @@ group :test do
   gem 'selenium-webdriver'
   gem 'shoulda-matchers'
   gem 'fabrication'
+  gem 'webmock'
 end
