@@ -42,7 +42,7 @@ common: &default_settings
   #       - Ajax Service
   #       - All Services
   #
-  app_name: Não Passarão
+  app_name: Tribunais
 
   # When "true", the agent collects performance data about your
   # application and reports this data to the New Relic service at
@@ -224,4 +224,4 @@ production:
 staging:
   <<: *default_settings
   monitor_mode: true
-  app_name: Não Passarão (Staging)
+  app_name: Tribunais (Staging)
