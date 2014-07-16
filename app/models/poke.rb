@@ -3,7 +3,7 @@ class Poke < ActiveRecord::Base
 
   validates :user_id, presence: true, uniqueness: true
 
-  after_create { self.delay.add_to_mailchimp_segment }
+  after_create { self.delay.add_to_accounts_segment }
 
   def self.create_from_user params
     user = User.find_by_email(params[:email])
@@ -11,12 +11,19 @@ class Poke < ActiveRecord::Base
     Poke.where("user_id = ?", user.id).first_or_create(user_id: user.id)
   end
 
-  def add_to_mailchimp_segment
+  def add_to_accounts_segment
     begin
-      Gibbon::API.lists.subscribe(id: ENV["MAILCHIMP_LIST_ID"], email: {email: self.user.email}, merge_vars: {FNAME: self.user.first_name, LNAME: self.user.last_name, CITY: self.user.city}, double_optin: false, update_existing: true)
-      Gibbon::API.lists.static_segment_members_add(id: ENV["MAILCHIMP_LIST_ID"], seg_id: ENV["MAILCHIMP_SEGMENT_ID"], batch: [{email: self.user.email}])
+      url = "#{ENV["ACCOUNTS_HOST"]}/users/#{self.user_id}/segment_subscriptions.json"
+      body = {
+        token: ENV["ACCOUNTS_API_TOKEN"],
+        segment_subscription: {
+          organization_id: Organization.find_by_slug('meurio').id,
+          segment_id: ENV['SEGMENT_ID']
+        }
+      }
+      HTTParty.post(url, body: body.to_json, headers: { 'Content-Type' => 'application/json' })
     rescue Exception => e
-      Rails.logger.error e
+      logger.error e.message
     end
   end
 end
