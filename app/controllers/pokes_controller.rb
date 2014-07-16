@@ -4,7 +4,7 @@ class PokesController < InheritedResources::Base
     poke = Poke.create_from_user(poke_params)
 
     PokeMailer.delay.thanks_for_poke(poke)
-    PokeMailer.delay.fight_against_the_abuse_on_the_trains(poke)
+    # PokeMailer.delay.fight_against_the_abuse_on_the_trains(poke)
 
     redirect_to root_path(anchor: "share")
   end

@@ -1,10 +1,11 @@
 class PokeMailer < ActionMailer::Base
-  default from: "Anna - Minha Sampa <anna@minhasampa.org.br>"
+  default from: "Guilherme - Meu Rio <guilherme@meurio.org.br>"
+  layout :mail
 
   def thanks_for_poke poke
     @poke = poke
-    headers["X-MC-Tags"] = "naopassarao,thanks_for_poke"
-    mail(to: @poke.user.email, subject: "Obrigada por participar. Agora, vamos espalhar essa ideia!")
+    headers["X-MC-Tags"] = "tribunais,thanks_for_poke"
+    mail(to: @poke.user.email, subject: "Passo 1 da missão pela Desmilitarização da Justiça")
   end
 
   def fight_against_the_abuse_on_the_trains poke
