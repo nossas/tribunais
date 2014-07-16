@@ -1,63 +1,61 @@
 .slide-1
   .row
-    .minha-sampa= link_to(image_tag("minha-sampa.png"), "http://join.minhasampa.org.br/")
-    .counter
-      .digits-and-text
-        .digits
-          .digits
-            - Poke.count.to_s.chars.each do |c|
-              span.digit= c
-        .text
-          span
-            | Dizem que abusadores
-            br
-            | não passarão
-  .row
-    .wraper
-      h2
-        | Metrô de São Paulo, use sua verba de comunicação para conter abusos sexuais nos trens e estações!
-        br
-        span Abusadores NÃO PASSARÃO!
-      p Nas últimas duas semanas, oito homens foram presos em flagrante abusando de mulheres no transporte público em São Paulo. Só este ano, já foram denunciados 26 casos. Como se não bastasse a violência vivenciada pelos passageiros diariamente, o Metrô divulgou uma propaganda inaceitável, na qual - em meio a elogios ao governo do Estado -  dizia que "trem lotado é bom para xavecar mulher". Diante da imensa pressão dos paulistanos, a propaganda foi tirada do ar. Mas isso não é o bastante.
-      p Em ano eleitoral, é tristemente comum que recursos públicos sejam usados para bancar propaganda de conteúdo essencialmente político. Mas esse ano, podemos mudar essa história. O furor causado pela propaganda desastrosa do Metrô nos dá uma oportunidade única: pressionar o Metrô a investir sua verba pública de comunicação na maior campanha de prevenção ao abuso sexual já feita em São Paulo. Vamos exigir uma campanha para informar as mulheres de que abuso sexual é crime, explicar claramente como proceder em caso de ocorrência, e mandar uma mensagem clara aos possíveis abusadores: não passarão!
-      p.lead Preencha o formulário abaixo para mandar um email automático ao Presidente do Metrô, Luiz Antonio Carvalho Pacheco, exigindo que a verba de comunicação seja usada para campanhas de prevenção e combate ao abuso sexual.
+    .title
+      h2 Você sabia que no Brasil você ainda pode ser julgado por um tribunal militar?
+      strong #desmilitarizacaodajustica
+    .text
+      p Apesar de vivermos em uma democracia,  qualquer cidadão civil pode virar reú da justiça militar, caso seja acusado de desacato ou outras formas de insubordinação contra membros das forças armadas.
+      p A boa notícia é que a Procuradoria Geral da República acaba de entrar com uma ação no Supremo Tribunal Federal para acabar com esse absurdo. E o voto do STF deve ocorrer ainda esse ano!
+      p Mas sabemos que os militares não querem abrir mão de seus privilégios, e já estão se movimentando para tentar influenciar os ministros do STF na semana do voto. É por isso que estamos unindo pessoas dispostas a orquestrar um contra-ataque.
+      p Juntos, vamos criar a maior mobilização pela desmilitarização da justiça que o Brasil já viu. Venha fazer história junto com a gente! Mobilizadores inscritos receberão um email na semana do voto com o plano da missão para pressionar os ministros do STF nas ruas e nas redes. Inscreva-se agora:
+
   .form_wraper
     .row
       = form_for @poke, html: { "data-abide" => true } do |form|
         .row
           .first_name_field
-            = text_field_tag :first_name, nil, placeholder: "Insira seu primeiro nome", required: true
+            = text_field_tag :first_name, nil, placeholder: "Insira seu nome", required: true
           .last_name_field
             = text_field_tag :last_name, nil, placeholder: "Insira seu sobrenome", required: true
           .email_field
             = email_field_tag :email, nil, placeholder: "Insira seu email", required: true
           .submit_button
-            = form.submit "Enviar email", id: 'poke-submit-button', class: [:button, :radius]
+            = form.submit "Inscreva-se agora", id: 'poke-submit-button', class: [:button, :radius]
   .row.email_message
     .wraper
       = link_to "Quero ver o email que será enviado", "#preview_email", "data-reveal-id" => "preview_email", "data-reveal" => true
 
-.slide-2
-  .row
-    .wraper
-      .box
-        h2 Porque utilizar a verba de comunicação na contenção de abusos?
-        p A utilização massiva de publicidade e informação é um método comprovadamente eficaz de prevenção e combate ao abuso sexual. Um dos casos mais conhecidos é o da série de propagandas "Don't be that guy", que foi decisiva para que o número de casos registrados em Vancouver, no Canadá, fosse #{link_to 'reduzido em 10%', 'http://www.theglobeandmail.com/news/british-columbia/dont-be-that-guy-ad-campaign-cuts-vancouver-sex-assaults-by-10-per-cent-in-2011/article1359241/', target: :blank} em menos de um ano. Os efeitos foram tão positivos que várias outras cidades adotaram a mesma estratégia.
-        p Agora, o Metrô deveria seguir o exemplo e demonstrar na prática que trabalha para reduzir os casos de violência sexual em seus vagões e estações.  Até o momento, o Metrô limitou-se a emitir uma nota de esclarecimento, repudiando o conteúdo da propaganda. É muito pouco para um serviço que transporta diariamente 4,5 milhões de pessoas, e gosta de dizer que se preocupa com a cidadania dos seus usuários.
-        h2
-          span Escute a propaganda (mal)feita pelo Metrô:
-        p.lead cuidado, conteúdo ofensivo
-        iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/141696215&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_artwork=true"
-
-.slide-3
-  .row
-    .title
-      h2
-        span Quem são os criadores dessa mobilização?
-    .text
-      p Essa mobilização foi criada por um grupo de cidadãos paulistanos (de certidão ou de coração) que acreditam na participação cidadã e na união de muitas pessoas como instrumento para criação de uma cidade melhor. Em breve, lançaremos o Minha Sampa, organização que será dedicada a fomentar uma rede de entusiastas de São Paulo que querem participar ativamente da construção de uma cidade mais inclusiva, participativa, e gostosa de se viver. Nessa empreitada, estamos sendo apoiados pela equipe do Meu Rio, que já faz um trabalho lindo no Rio de Janeiro.
-      p Não tínhamos planejado lançar essa mobilização antes do Minha Sampa sair do forno. Mas resolvemos que não podíamos ficar calados. Primeiro, porque os casos de abuso sexual em espaços públicos são uma grande ameaça a um uso verdadeiramente democrático da cidade e sua infraestrutura, e, por isso, deveriam ser uma prioridade para todos aqueles que desejam uma São Paulo melhor. Segundo, porque acreditamos que recursos públicos podem e devem ser destinados a causas públicas. Verbas de comunicação costumam ser usadas para fins políticos eleitorais, e isso não é legal. Vemos nessa mobilização a oportunidade de envolver todos os paulistanos e paulistanas na definição de como os nossos recursos de comunicação são usados. E contamos com você. Envie seu email de pressão ao presidente do Metrô agora.
-
+/   .row
+/     .wraper
+/       h2
+/         | Metrô de São Paulo, use sua verba de comunicação para conter abusos sexuais nos trens e estações!
+/         br
+/         span Abusadores NÃO PASSARÃO!
+/       p Nas últimas duas semanas, oito homens foram presos em flagrante abusando de mulheres no transporte público em São Paulo. Só este ano, já foram denunciados 26 casos. Como se não bastasse a violência vivenciada pelos passageiros diariamente, o Metrô divulgou uma propaganda inaceitável, na qual - em meio a elogios ao governo do Estado -  dizia que "trem lotado é bom para xavecar mulher". Diante da imensa pressão dos paulistanos, a propaganda foi tirada do ar. Mas isso não é o bastante.
+/       p Em ano eleitoral, é tristemente comum que recursos públicos sejam usados para bancar propaganda de conteúdo essencialmente político. Mas esse ano, podemos mudar essa história. O furor causado pela propaganda desastrosa do Metrô nos dá uma oportunidade única: pressionar o Metrô a investir sua verba pública de comunicação na maior campanha de prevenção ao abuso sexual já feita em São Paulo. Vamos exigir uma campanha para informar as mulheres de que abuso sexual é crime, explicar claramente como proceder em caso de ocorrência, e mandar uma mensagem clara aos possíveis abusadores: não passarão!
+/       p.lead Preencha o formulário abaixo para mandar um email automático ao Presidente do Metrô, Luiz Antonio Carvalho Pacheco, exigindo que a verba de comunicação seja usada para campanhas de prevenção e combate ao abuso sexual.
+/
+/ .slide-2
+/   .row
+/     .wraper
+/       .box
+/         h2 Porque utilizar a verba de comunicação na contenção de abusos?
+/         p A utilização massiva de publicidade e informação é um método comprovadamente eficaz de prevenção e combate ao abuso sexual. Um dos casos mais conhecidos é o da série de propagandas "Don't be that guy", que foi decisiva para que o número de casos registrados em Vancouver, no Canadá, fosse #{link_to 'reduzido em 10%', 'http://www.theglobeandmail.com/news/british-columbia/dont-be-that-guy-ad-campaign-cuts-vancouver-sex-assaults-by-10-per-cent-in-2011/article1359241/', target: :blank} em menos de um ano. Os efeitos foram tão positivos que várias outras cidades adotaram a mesma estratégia.
+/         p Agora, o Metrô deveria seguir o exemplo e demonstrar na prática que trabalha para reduzir os casos de violência sexual em seus vagões e estações.  Até o momento, o Metrô limitou-se a emitir uma nota de esclarecimento, repudiando o conteúdo da propaganda. É muito pouco para um serviço que transporta diariamente 4,5 milhões de pessoas, e gosta de dizer que se preocupa com a cidadania dos seus usuários.
+/         h2
+/           span Escute a propaganda (mal)feita pelo Metrô:
+/         p.lead cuidado, conteúdo ofensivo
+/         iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/141696215&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_artwork=true"
+/
+/ .slide-3
+/   .row
+/     .title
+/       h2
+/         span Quem são os criadores dessa mobilização?
+/     .text
+/       p Essa mobilização foi criada por um grupo de cidadãos paulistanos (de certidão ou de coração) que acreditam na participação cidadã e na união de muitas pessoas como instrumento para criação de uma cidade melhor. Em breve, lançaremos o Minha Sampa, organização que será dedicada a fomentar uma rede de entusiastas de São Paulo que querem participar ativamente da construção de uma cidade mais inclusiva, participativa, e gostosa de se viver. Nessa empreitada, estamos sendo apoiados pela equipe do Meu Rio, que já faz um trabalho lindo no Rio de Janeiro.
+/       p Não tínhamos planejado lançar essa mobilização antes do Minha Sampa sair do forno. Mas resolvemos que não podíamos ficar calados. Primeiro, porque os casos de abuso sexual em espaços públicos são uma grande ameaça a um uso verdadeiramente democrático da cidade e sua infraestrutura, e, por isso, deveriam ser uma prioridade para todos aqueles que desejam uma São Paulo melhor. Segundo, porque acreditamos que recursos públicos podem e devem ser destinados a causas públicas. Verbas de comunicação costumam ser usadas para fins políticos eleitorais, e isso não é legal. Vemos nessa mobilização a oportunidade de envolver todos os paulistanos e paulistanas na definição de como os nossos recursos de comunicação são usados. E contamos com você. Envie seu email de pressão ao presidente do Metrô agora.
+/
 #preview_email.medium.reveal-modal{data-reveal=true}
   p.lead Caro Sr. Luiz Antonio Carvalho Pacheco,
   p Em sua nota pública sobre a terrível propaganda veículada pela rádio transamérica, - que já foi retirada de circulação, mas teria sido paga com dinheiro do contribuinte -, o senhor afirmou que repudia o conteúdo da peça publicitária. No entanto, isso não basta!
@@ -74,28 +72,28 @@
   = link_to "Compartilhe no Facebook", "https://www.facebook.com/sharer/sharer.php?u=#{URI::encode(root_url)}", class: ["button", "facebook-share"]
   = link_to "Compartilhe no Twitter", "https://twitter.com/share?url=#{URI::encode('http:bit.ly/nãopassarão')}&text=#{URI::encode(t('share.twitter.tweet'))}&hashtags=#{URI::encode('abusadoresnãopassarão')}", class: ["button", "twitter-share"]
   a.close-reveal-modal &#215;
-
-#gandalf.medium.reveal-modal{data-reveal=true}
-  = image_tag("gandalf.png")
-  = audio_tag("gandalf.wav", id: "gandalf-audio")
-
-#email-message.medium.reveal-modal{data-reveal=true}
-  p.lead Caro Sr. Luiz Antonio Carvalho Pacheco,
-  p Em sua nota pública sobre a terrível propaganda veículada pela rádio transamérica, - que já foi retirada de circulação, mas teria sido paga com dinheiro do contribuinte -, o senhor afirmou que repudia o conteúdo da peça publicitária. No entanto, isso não basta!
-  p A epidemia de abuso sexual dentro dos vagões e estações do Metrô é o tipo de problema grave que deve ser combatido com todo empenho e repertório de instrumentos que o senhor dispõe. Um deles é justamente o que foi usado na propaganda, que  é sua verba de comunicação. Até agora, ela tem sido utilizada para fazer transmitir muitos auto-elogios, mas muito pouca informação.
-  p Para mostrar seu vontade genuína em diminuir a incidência desse tipo de crime, que tal criar uma campanha massiva de educação e prevenção contra abusos sexuais no Metrô de São Paulo? Tenho certeza que, assim como eu, milhares paulistanos sentiriam a valorização de sua cidadania e de um espaço público que é de todos nós.
-  p Fico no aguardo de sua resposta!
-  a class="close-reveal-modal" &#215;
-
-#victory.medium.reveal-modal{data-reveal=true}
-  h3 VITÓRIA DA MOBILIZAÇÃO!!!
-  p Depois de quase 5 mil pressões em menos de uma semana o Presidente do Metrô, Luiz Antônio Carvalho Pacheco, anunciou que será criada campanha de prevenção ao abuso sexual no Metrô!
-  p Vitória nossa, paulistanos e paulistanas que não toleram a violência e que acreditam que dinheiro o dinheiro público não deve ser gasto para fazer auto-propaganda.
-  p Vamos continuar acompanhando para ter certeza que as ações prometidas serão realizadas e que o Metrô enviará uma mensagem clara: Abusadores não passarão.
-  p Essa vitória mostra que cidadãos unidos podem sim ajudar a definir os rumos da cidade e mudá-la para melhor!
-  p Não Passarão foi a primeira ação do Minha Sampa, rede de mobilização de paulistanos (de certidão e de coração) pela criação de uma cidade mais democrática, participativa e boa de se viver!
-  p Quer saber dos nosso próximos passos? Então curta o face do #{link_to 'Minha Sampa', 'http://www.facebook.com/MinhaSampa', target: :blank, class: 'link'}: é lá que você terá notícias sobre os próximos passos da rede e também das ações de acompanhamento da campanha do Metrô.
-  p Juntos vamos fazer uma São Paulo pensada para as pessoas e construída pelos paulistanos!
-
-  = link_to "CURTA A GENTE NO FACE AGORA", "http://www.facebook.com/MinhaSampa", target: :blank, class: ["button", "facebook-link"]
-  a.close-reveal-modal &#215;
+/
+/ #gandalf.medium.reveal-modal{data-reveal=true}
+/   = image_tag("gandalf.png")
+/   = audio_tag("gandalf.wav", id: "gandalf-audio")
+/
+/ #email-message.medium.reveal-modal{data-reveal=true}
+/   p.lead Caro Sr. Luiz Antonio Carvalho Pacheco,
+/   p Em sua nota pública sobre a terrível propaganda veículada pela rádio transamérica, - que já foi retirada de circulação, mas teria sido paga com dinheiro do contribuinte -, o senhor afirmou que repudia o conteúdo da peça publicitária. No entanto, isso não basta!
+/   p A epidemia de abuso sexual dentro dos vagões e estações do Metrô é o tipo de problema grave que deve ser combatido com todo empenho e repertório de instrumentos que o senhor dispõe. Um deles é justamente o que foi usado na propaganda, que  é sua verba de comunicação. Até agora, ela tem sido utilizada para fazer transmitir muitos auto-elogios, mas muito pouca informação.
+/   p Para mostrar seu vontade genuína em diminuir a incidência desse tipo de crime, que tal criar uma campanha massiva de educação e prevenção contra abusos sexuais no Metrô de São Paulo? Tenho certeza que, assim como eu, milhares paulistanos sentiriam a valorização de sua cidadania e de um espaço público que é de todos nós.
+/   p Fico no aguardo de sua resposta!
+/   a class="close-reveal-modal" &#215;
+/
+/ #victory.medium.reveal-modal{data-reveal=true}
+/   h3 VITÓRIA DA MOBILIZAÇÃO!!!
+/   p Depois de quase 5 mil pressões em menos de uma semana o Presidente do Metrô, Luiz Antônio Carvalho Pacheco, anunciou que será criada campanha de prevenção ao abuso sexual no Metrô!
+/   p Vitória nossa, paulistanos e paulistanas que não toleram a violência e que acreditam que dinheiro o dinheiro público não deve ser gasto para fazer auto-propaganda.
+/   p Vamos continuar acompanhando para ter certeza que as ações prometidas serão realizadas e que o Metrô enviará uma mensagem clara: Abusadores não passarão.
+/   p Essa vitória mostra que cidadãos unidos podem sim ajudar a definir os rumos da cidade e mudá-la para melhor!
+/   p Não Passarão foi a primeira ação do Minha Sampa, rede de mobilização de paulistanos (de certidão e de coração) pela criação de uma cidade mais democrática, participativa e boa de se viver!
+/   p Quer saber dos nosso próximos passos? Então curta o face do #{link_to 'Minha Sampa', 'http://www.facebook.com/MinhaSampa', target: :blank, class: 'link'}: é lá que você terá notícias sobre os próximos passos da rede e também das ações de acompanhamento da campanha do Metrô.
+/   p Juntos vamos fazer uma São Paulo pensada para as pessoas e construída pelos paulistanos!
+/
+/   = link_to "CURTA A GENTE NO FACE AGORA", "http://www.facebook.com/MinhaSampa", target: :blank, class: ["button", "facebook-link"]
+/   a.close-reveal-modal &#215;

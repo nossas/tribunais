@@ -1,22 +1,17 @@
 body
   color: white
-  text-align: center
   font-family: "Proxima Nova Soft"
 
-footer
-  background: $pink
-  text-align: left
-  padding: 0 0 3em 0
-
 h2, h3
-  font-family: "Brush Up"
-  color: $yellow
+  font-family: "Garage Gothic"
+  color: $blue
   text-transform: uppercase
   span
     color: white
 
 h2
-  font-size: 2.5em
+  font-size: 3.5em
+  line-height: 1em
 
 h3
   font-size: 2em
@@ -25,8 +20,11 @@ a
   color: white
   text-decoration: underline
   font-weight: bold
-  &:hover
-    color: $light-gray
+
+strong
+  display: inline-block
+  color: $yellow
+  font-size: 1.5em
 
 p.lead
   color: $yellow
@@ -48,13 +46,20 @@ p.lead
   background: rgba(0, 0, 0, .75)
   padding: 1em
 
+.title
+  +grid-column(5)
+
+.text
+  +grid-column(7)
+
 .slide-1
   background: asset-url("slide-1-bg.jpg") top center
-  .minha-sampa
-    text-align: left
-  .minha-sampa, .counter
-    +grid-column(6)
-    margin-bottom: 1.5em
+  padding-top: 3em
+  padding-bottom: 3em
+  .title
+    text-align: right
+    h2
+      margin-bottom: 1em
   .counter
     .digits-and-text
       float: right
@@ -77,14 +82,10 @@ p.lead
         line-height: 19px
         text-align: left
 
-.slide-1, .slide-2
-  padding: 1em 0 3em 0
-
 .slide-2
   background: asset-url("slide-2-bg.jpg") left 40%
 
 .slide-3
-  background: $pink
   padding: 6em 0 8em 0
   .title
     +grid-column(4)
@@ -122,7 +123,7 @@ p.lead
   p, a.link
     color: #333
     &.phone
-      font-family: "Brush Up"
+      font-family: "Garage Gothic"
       font-size: 2.5em
   .button
     margin: 0
@@ -130,38 +131,39 @@ p.lead
     margin-right: 1em
 
 form
-  background: asset-url("bg-form.png") center center
-  padding: 1.6em 1em 2em 1em
+  background: $blue-dark
+  padding: 1em
   margin-bottom: 1em
   +grid-column(12)
   .button
     width: 100%
     text-transform: uppercase
   .first_name_field, .last_name_field, .email_field, .submit_button
-    +grid-column(3)
     input
       margin: 0
     &.error
       input
         border-color: red
+  .first_name_field, .last_name_field
+    +grid-column(3)
+  .email_field
+    +grid-column(2)
   .submit_button
+    +grid-column(4)
     input
       font-family: inherit
-      padding: .5em
-
+      padding: 5px
+      font-size: 21px
+      border: 1px solid $blue
 
 @media (max-width: 900px)
   .slide-1
-    .minha-sampa, .counter
+    .text, .title
       +grid-column(12)
       text-align: center
-      .digits-and-text
-        float: none
-        .digits, .text
-          float: none
-          text-align: center
-        .digits
-          margin-bottom: 1em
+    .title
+      h2, strong
+        margin-bottom: 1em
 
   .slide-3
     .title, .text
@@ -170,7 +172,6 @@ form
 
 @media (max-width: 750px)
   form
-    background: $form-bg
     +grid-column(6, true, true)
     .first_name_field, .last_name_field, .email_field, .submit_button
       +grid-column(12)

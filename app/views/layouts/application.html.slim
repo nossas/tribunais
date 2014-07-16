@@ -7,7 +7,7 @@ html
     meta property="og:image" content=image_url("facebook-share.jpg")
     meta property="og:description" content=t("share.facebook.description")
     meta property="og:url" content=request.url
-    title Não Passarão
+    title Desmilitarização da Justiça
     = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true
     = javascript_include_tag "vendor/modernizr"
     = favicon_link_tag 'favicon.png'
@@ -22,12 +22,7 @@ html
           js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=123808244477389"; // 270703629774561
           fjs.parentNode.insertBefore(js, fjs);
         }(document, 'script', 'facebook-jssdk'));
-    
+
     = render partial: 'layouts/google_analytics'
     = yield
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
-    
-    footer
-      .row
-        .large-12.columns
-          <div class="fb-like" data-href="https://www.facebook.com/naopassarao" data-width="360" data-show-faces="true" data-send="false" data-colorscheme="dark"></div>
