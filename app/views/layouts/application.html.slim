@@ -13,6 +13,7 @@ html
     = favicon_link_tag 'favicon.png'
     = csrf_meta_tags
   body
+    = render partial: 'layouts/google_analytics'
     #fb-root
       javascript:
         (function(d, s, id) {
@@ -22,7 +23,5 @@ html
           js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=123808244477389"; // 270703629774561
           fjs.parentNode.insertBefore(js, fjs);
         }(document, 'script', 'facebook-jssdk'));
-
-    = render partial: 'layouts/google_analytics'
     = yield
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
