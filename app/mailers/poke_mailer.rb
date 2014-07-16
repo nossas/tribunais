@@ -4,6 +4,7 @@ class PokeMailer < ActionMailer::Base
 
   def thanks_for_poke poke
     @poke = poke
+    @organization = Organization.find_by_slug('meurio')
     headers["X-MC-Tags"] = "tribunais,thanks_for_poke"
     mail(to: @poke.user.email, subject: "Passo 1 da missão pela Desmilitarização da Justiça")
   end
