@@ -1,6 +1,6 @@
 class PokeMailer < ActionMailer::Base
   default from: "Guilherme - Meu Rio <guilherme@meurio.org.br>"
-  layout :mail
+  layout "mail"
 
   def thanks_for_poke poke
     @poke = poke
