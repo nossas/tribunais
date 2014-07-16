@@ -26,13 +26,13 @@
       = form_for @poke, html: { "data-abide" => true } do |form|
         .row
           .first_name_field
-            = text_field_tag :first_name, nil, placeholder: "Insira seu primeiro nome", required: true, disabled: true
+            = text_field_tag :first_name, nil, placeholder: "Insira seu primeiro nome", required: true
           .last_name_field
-            = text_field_tag :last_name, nil, placeholder: "Insira seu sobrenome", required: true, disabled: true
+            = text_field_tag :last_name, nil, placeholder: "Insira seu sobrenome", required: true
           .email_field
-            = email_field_tag :email, nil, placeholder: "Insira seu email", required: true, disabled: true
+            = email_field_tag :email, nil, placeholder: "Insira seu email", required: true
           .submit_button
-            = form.submit "Enviar email", id: 'poke-submit-button', class: [:button, :radius], disabled: true
+            = form.submit "Enviar email", id: 'poke-submit-button', class: [:button, :radius]
   .row.email_message
     .wraper
       = link_to "Quero ver o email que será enviado", "#preview_email", "data-reveal-id" => "preview_email", "data-reveal" => true
