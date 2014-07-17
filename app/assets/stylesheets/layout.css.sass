@@ -100,13 +100,21 @@ p.lead
   background: asset-url("slide-2-bg.jpg") left 40%
 
 .slide-3
-  padding: 6em 0 8em 0
+  background: $blue
+  padding: 2em 0
+  .title, .text
+    text-align: center
   .title
-    +grid-column(4)
-    text-align: right
+    +grid-column(12)
+    h2
+      color: $gray-dark
   .text
-    +grid-column(8)
-    text-align: left
+    +grid-column($columns: 8, $center: true)
+    strong
+      display: block
+  .image
+    +grid-column(12)
+    margin-bottom: 3em
 
 .close-reveal-modal
   text-decoration: none
