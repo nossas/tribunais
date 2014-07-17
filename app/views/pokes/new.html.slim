@@ -2,7 +2,7 @@
   .row
     .title
       h2 Você sabia que no Brasil você ainda pode ser julgado por um tribunal militar?
-      strong #DesmilitarizacaoDaJustica
+      strong #DesmilitarizaçãodaJustiça
     .text
       p Apesar de vivermos em uma democracia,  qualquer cidadão civil pode virar reú da justiça militar, caso seja acusado de desacato ou outras formas de insubordinação contra membros das forças armadas.
       p A boa notícia é que a Procuradoria Geral da República acaba de entrar com uma ação no Supremo Tribunal Federal para acabar com esse absurdo. E o voto do STF deve ocorrer ainda esse ano!
@@ -21,10 +21,11 @@
             = email_field_tag :email, nil, placeholder: "Insira seu email", required: true
           .submit_button
             = form.submit "Inscreva-se agora", id: 'poke-submit-button', class: [:button, :radius]
-  .row.email_message
-    .wraper
-      = link_to "Quero ver o email que será enviado", "#preview_email", "data-reveal-id" => "preview_email", "data-reveal" => true
 
+/ .row.email_message
+/   .wraper
+/     = link_to "Quero ver o email que será enviado", "#preview_email", "data-reveal-id" => "preview_email", "data-reveal" => true
+/
 /   .row
 /     .wraper
 /       h2
