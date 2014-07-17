@@ -158,6 +158,24 @@ p.lead
   .title
     text-align: right
 
+.slide-7
+  background: $blue
+  padding: 2em 0
+  .title, .text
+    text-align: center
+  .title
+    +grid-column(12)
+    h2
+      color: $gray-dark
+  .text
+    +grid-column($columns: 8, $center: true)
+    strong
+      display: block
+      line-height: 1em
+  .image
+    +grid-column(12)
+    margin-bottom: 1em
+
 .close-reveal-modal
   text-decoration: none
 
@@ -242,6 +260,11 @@ form
       margin-bottom: 2em
 
   .slide-6
+    .title, .text
+      +grid-column(12)
+      text-align: left
+
+  .slide-7
     .title, .text
       +grid-column(12)
       text-align: left
