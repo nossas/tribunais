@@ -1,5 +1,18 @@
 .slide-1
   .row
+    - if Poke.count >= 100
+      .counter
+        .digits-and-text
+          .digits
+            - Poke.count.to_s.chars.each do |c|
+              span.digit= c
+          .counter-text
+            span
+              | Pessoas pedindo a
+              br
+              | desmilitarização da justiça
+
+  .row
     .title
       h2 Você sabia que no Brasil você ainda pode ser julgado por um tribunal militar?
       strong #DesmilitarizaçãodaJustiça

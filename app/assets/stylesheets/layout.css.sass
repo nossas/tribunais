@@ -54,22 +54,28 @@ p.lead
 
 .slide-1
   background: asset-url("slide-1-bg.jpg") top center
-  padding-top: 4em
-  padding-bottom: 4em
+  padding-top: 2em
+  padding-bottom: 2em
   .title
     text-align: right
     h2
       margin-bottom: 1em
   .email_message
     text-align: right
+  .text
+    margin-bottom: 1em
   .counter
+    +grid-column($columns: 7, $offset: 5)
+    margin-bottom: 2em
     .digits-and-text
-      float: right
-      .digits, .text
-        float: left
+      text-align: left
+      .digits, .counter-text
+        display: inline-block
       .digits
         margin-right: .5em
       span.digit
+        color: $yellow
+        text-align: center
         background: asset-url("counter-bg.png")
         margin-right: 2px
         display: inline-block
@@ -79,10 +85,16 @@ p.lead
         font-size: 1.75em
         &:last-child
           margin-right: 0
-      .text
+      .counter-text
         text-transform: uppercase
-        line-height: 19px
+        line-height: 1em
         text-align: left
+        color: $gray-dark
+        font-size: 14px
+        font-weight: bold
+        span
+          position: relative
+          top: 3px
 
 .slide-2
   background: asset-url("slide-2-bg.jpg") left 40%
@@ -148,13 +160,15 @@ form
 @media (max-width: 900px)
   .slide-1
     .email_message
-      text-align: center
+      text-align: left
     .text, .title
       +grid-column(12)
-      text-align: center
+      text-align: left
     .title
       h2, strong
         margin-bottom: 1em
+    .counter
+      +grid-column($columns: 12, $offset: 0)
 
   #share
     .facebook-share
@@ -164,10 +178,16 @@ form
     .title, .text
       +grid-column(12)
       text-align: center
+  form
+    +grid-column(8, true, true)
+    .first_name_field, .last_name_field, .email_field, .submit_button
+      +grid-column(12)
+    .first_name_field, .last_name_field, .email_field
+      margin-bottom: 1em
 
 @media (max-width: 750px)
   form
-    +grid-column(6, true, true)
+    +grid-column(12, true, true)
     .first_name_field, .last_name_field, .email_field, .submit_button
       +grid-column(12)
     .first_name_field, .last_name_field, .email_field
@@ -175,4 +195,4 @@ form
 
 @media (max-width: 500px)
   form
-    +grid-column(8, true, true)
+    +grid-column(12, true, true)
