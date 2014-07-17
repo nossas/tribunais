@@ -176,6 +176,26 @@ p.lead
     +grid-column(12)
     margin-bottom: 1em
 
+.slide-5
+  background: $blue
+  padding: 2em 0 6em 0
+  .col
+    +grid-column(4)
+    .title, h2, p
+      +grid-column(12)
+      padding: 0
+    &.square
+      p
+        border: white 2px solid
+        padding: 1em
+        margin-bottom: 0
+  .title
+    display: block
+    h2
+      color: $gray-dark
+  img
+    padding-bottom: 1em
+
 .close-reveal-modal
   text-decoration: none
 
@@ -243,10 +263,6 @@ form
       +grid-column(12)
       text-align: center
 
-  #share
-    .facebook-share
-      margin: 0 0 1em 0
-
   .slide-3
     .title, .text
       +grid-column(12)
@@ -259,6 +275,10 @@ form
       +grid-column($columns: 6)
       margin-bottom: 2em
 
+  .slide-5
+    .col
+      +grid-column(8, $center: true)
+
   .slide-6
     .title, .text
       +grid-column(12)
@@ -269,6 +289,10 @@ form
       +grid-column(12)
       text-align: left
 
+  #share
+    .facebook-share
+      margin: 0 0 1em 0
+
   form
     +grid-column(8, true, true)
     .first_name_field, .last_name_field, .email_field, .submit_button
@@ -277,6 +301,10 @@ form
       margin-bottom: 1em
 
 @media (max-width: 750px)
+  .slide-5
+    .col
+      +grid-column(10, $center: true)
+
   form
     +grid-column(12, true, true)
     .first_name_field, .last_name_field, .email_field, .submit_button
@@ -285,6 +313,10 @@ form
       margin-bottom: 1em
 
 @media (max-width: 500px)
+  .slide-5
+    .col
+      +grid-column(12)
+
   form
     +grid-column(12, true, true)
 
