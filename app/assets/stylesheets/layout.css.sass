@@ -52,14 +52,19 @@ p.lead
 .text
   +grid-column(7)
 
+.slides-1-2
+  background: asset-url("slide-1-2-bg.jpg") top center
+  background-size: cover
+
 .slide-1
-  background: asset-url("slide-1-bg.jpg") top center
   padding-top: 4em
   padding-bottom: 4em
   .title
     text-align: right
     h2
       margin-bottom: 1em
+  .text p
+    font-size: 1.1em
   .email_message
     text-align: right
   .counter
@@ -82,10 +87,21 @@ p.lead
       .text
         text-transform: uppercase
         line-height: 19px
-        text-align: left
+        text-align: left        
 
 .slide-2
-  background: asset-url("slide-2-bg.jpg") left 40%
+  padding: 4em 0
+  .title 
+    strong
+      font-size: 1.1em
+      font-weight: normal
+      line-height: 1.2em
+  .text
+    +grid-column(12)
+    padding-top: 2em
+    p
+      font-size: 1.1em
+  
 
 .slide-3
   padding: 6em 0 8em 0
