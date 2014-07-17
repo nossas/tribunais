@@ -158,6 +158,8 @@ p.lead
     +grid-column(3)
     text-align: center
     height: 550px
+    &.fifth
+      +grid-column($columns: 3, $offset: 3)
 
 .slide-5
   background: $blue
@@ -291,6 +293,8 @@ form
     .ocup
       +grid-column($columns: 6)
       margin-bottom: 2em
+      &.fifth
+        +grid-column($columns: 6, $offset: 0)
 
   .slide-5
     .col
@@ -341,3 +345,5 @@ form
     .ocup
       +grid-column($columns: 12)
       height: auto
+      &.fifth
+        +grid-column($columns: 12)
