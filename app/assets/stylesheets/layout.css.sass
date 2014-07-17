@@ -54,6 +54,11 @@ p.lead
   p
     font-size: 1.1em
 
+.white
+  color: white
+  h2
+    color: white
+
 .slides-1-2
   background: asset-url("slide-1-2-bg.jpg") top center
   background-size: cover
@@ -133,7 +138,23 @@ p.lead
 
 .slide-4
   background: asset-url("slide-4-bg.jpg") top center
-  padding: 2em 0
+  padding: 3em 0
+  .title
+    text-align: right
+    &.white
+      +grid-column(12)
+      text-align: center
+      margin-bottom: 1em
+  .text
+    margin-bottom: 2em
+  .ocup
+    +grid-column(3)
+    text-align: center
+    height: 550px
+
+.slide-6
+  background: asset-url("slide-4-bg.jpg") top center
+  padding: 3em 0
   .title
     text-align: right
 
@@ -227,11 +248,23 @@ form
   .slide-3
     .title, .text
       +grid-column(12)
-      text-align: center
+
+  .slide-4
+    .title, .text
+      +grid-column(12)
+      text-align: left
+    .ocup
+      +grid-column($columns: 6)
+      margin-bottom: 2em
 
   .slide-5
     .col
       +grid-column(8, $center: true)
+
+  .slide-6
+    .title, .text
+      +grid-column(12)
+      text-align: left
 
   #share
     .facebook-share
@@ -263,3 +296,8 @@ form
       
   form
     +grid-column(12, true, true)
+
+  .slide-4
+    .ocup
+      +grid-column($columns: 12)
+      height: auto
