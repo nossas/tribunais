@@ -51,6 +51,8 @@ p.lead
 
 .text
   +grid-column(7)
+  p
+    font-size: 1.1em
 
 .slides-1-2
   background: asset-url("slide-1-2-bg.jpg") top center
@@ -62,8 +64,6 @@ p.lead
     text-align: right
     h2
       margin-bottom: 1em
-  .text p
-    font-size: 1.1em
   .email_message
     text-align: right
   .text
@@ -102,7 +102,7 @@ p.lead
 
 .slide-2
   padding: 2em 0
-  .title 
+  .title
     strong
       font-size: 1.1em
       font-weight: normal
@@ -112,7 +112,7 @@ p.lead
     padding-top: 2em
     p
       font-size: 1.1em
-  
+
 
 .slide-3
   background: $blue
@@ -130,6 +130,12 @@ p.lead
   .image
     +grid-column(12)
     margin-bottom: 3em
+
+.slide-4
+  background: asset-url("slide-4-bg.jpg") top center
+  padding: 2em 0
+  .title
+    text-align: right
 
 .close-reveal-modal
   text-decoration: none
