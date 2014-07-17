@@ -152,6 +152,12 @@ p.lead
     text-align: center
     height: 550px
 
+.slide-6
+  background: asset-url("slide-4-bg.jpg") top center
+  padding: 3em 0
+  .title
+    text-align: right
+
 .close-reveal-modal
   text-decoration: none
 
@@ -234,6 +240,11 @@ form
     .ocup
       +grid-column($columns: 6)
       margin-bottom: 2em
+
+  .slide-6
+    .title, .text
+      +grid-column(12)
+      text-align: left
 
   form
     +grid-column(8, true, true)
