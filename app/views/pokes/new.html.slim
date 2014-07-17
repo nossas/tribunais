@@ -1,39 +1,57 @@
-.slide-1
-  .row
-    - if Poke.count >= 100
-      .counter
-        .digits-and-text
-          .digits
-            - Poke.count.to_s.chars.each do |c|
-              span.digit= c
-          .counter-text
-            span
-              | Pessoas pedindo a
-              br
-              | desmilitarização da justiça
-
-  .row
-    .title
-      h2 Você sabia que no Brasil você ainda pode ser julgado por um tribunal militar?
-      strong #DesmilitarizaçãodaJustiça
-    .text
-      p Apesar de vivermos em uma democracia,  qualquer cidadão civil pode virar reú da justiça militar, caso seja acusado de desacato ou outras formas de insubordinação contra membros das forças armadas.
-      p A boa notícia é que a Procuradoria Geral da República acaba de entrar com uma ação no Supremo Tribunal Federal para acabar com esse absurdo. E o voto do STF deve ocorrer ainda esse ano!
-      p Mas sabemos que os militares não querem abrir mão de seus privilégios, e já estão se movimentando para tentar influenciar os ministros do STF na semana do voto. É por isso que estamos unindo pessoas dispostas a orquestrar um contra-ataque.
-      p Juntos, vamos criar a maior mobilização pela desmilitarização da justiça que o Brasil já viu. Venha fazer história junto com a gente! Mobilizadores inscritos receberão um email na semana do voto com o plano da missão para pressionar os ministros do STF nas ruas e nas redes. Inscreva-se agora:
-
-  .form_wraper
+.slides-1-2
+  .slide-1
     .row
-      = form_for @poke, html: { "data-abide" => true } do |form|
-        .row
-          .first_name_field
-            = text_field_tag :first_name, nil, placeholder: "Insira seu nome", required: true
-          .last_name_field
-            = text_field_tag :last_name, nil, placeholder: "Insira seu sobrenome", required: true
-          .email_field
-            = email_field_tag :email, nil, placeholder: "Insira seu email", required: true
-          .submit_button
-            = form.submit "Inscreva-se agora", id: 'poke-submit-button', class: [:button, :radius]
+      - if Poke.count >= 100
+        .counter
+          .digits-and-text
+            .digits
+              - Poke.count.to_s.chars.each do |c|
+                span.digit= c
+            .counter-text
+              span
+                | Pessoas pedindo a
+                br
+                | desmilitarização da justiça
+    
+    .row
+      .title
+        h2 Você sabia que no Brasil você ainda pode ser julgado por um tribunal militar?
+        strong #DesmilitarizaçãodaJustiça
+      .text
+        p Apesar de vivermos em uma democracia,  qualquer cidadão civil pode virar reú da justiça militar, caso seja acusado de desacato ou outras formas de insubordinação contra membros das forças armadas.
+        p A boa notícia é que a Procuradoria Geral da República acaba de entrar com uma ação no Supremo Tribunal Federal para acabar com esse absurdo. E o voto do STF deve ocorrer ainda esse ano!
+        p Mas sabemos que os militares não querem abrir mão de seus privilégios, e já estão se movimentando para tentar influenciar os ministros do STF na semana do voto. É por isso que estamos unindo pessoas dispostas a orquestrar um contra-ataque.
+        p Juntos, vamos criar a maior mobilização pela desmilitarização da justiça que o Brasil já viu. Venha fazer história junto com a gente! Mobilizadores inscritos receberão um email na semana do voto com o plano da missão para pressionar os ministros do STF nas ruas e nas redes. Inscreva-se agora:
+
+    .form_wraper
+      .row
+        = form_for @poke, html: { "data-abide" => true } do |form|
+          .row
+            .first_name_field
+              = text_field_tag :first_name, nil, placeholder: "Insira seu nome", required: true
+            .last_name_field
+              = text_field_tag :last_name, nil, placeholder: "Insira seu sobrenome", required: true
+            .email_field
+              = email_field_tag :email, nil, placeholder: "Insira seu email", required: true
+            .submit_button
+              = form.submit "Inscreva-se agora", id: 'poke-submit-button', class: [:button, :radius]
+
+  .slide-2
+    .row
+      .title
+        h2 HOJE, CIVIS PODEM SER CONDENADOS PELA JUSTIÇA MILITAR
+        strong T. R, 26 anos, condenada a 2 anos e 6 meses de prisão pela Justiça Militar da União
+    .row
+      .text
+        p Complexo do Alemão, 2011. Era madrugada quando T.R, então com 22 anos, saiu de casa para ajudar seu vizinho, que gritava por socorro enquanto era colocado em um jipe por militares. Sem entender o que acontecia, ela pediu para falar com ele, mas recebeu em troca um tiro de borracha no pé esquerdo, 3 dedos quebrados, e uma prisão.
+
+        p No hospital onde foi atendida naquele dia, T se recusou a assinar um papel em branco apresentado por um oficial militar. Teve voz de prisão e foi acusada de desacato e outros crimes.
+
+        p T. foi condenada a 6 meses de prisão pela primeira instância da Justiça Militar da União, que usou testemunhos de militares do próprio grupamento que a agrediu. O Superior Tribunal Militar manteve a decisão, e T. cumpre pena em regime aberto.
+
+        p Os militares envolvidos no caso não foram processados.
+
+
 
 / .row.email_message
 /   .wraper
