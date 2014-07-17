@@ -20,6 +20,8 @@ a
   color: white
   text-decoration: underline
   font-weight: bold
+  &.external_link
+    font-family: "Garage Gothic"
 
 strong
   display: inline-block
@@ -152,6 +154,26 @@ p.lead
     text-align: center
     height: 550px
 
+.slide-5
+  background: $blue
+  padding: 2em 0 6em 0
+  .col
+    +grid-column(4)
+    .title, h2, p
+      +grid-column(12)
+      padding: 0
+    &.square
+      p
+        border: white 2px solid
+        padding: 1em
+        margin-bottom: 0
+  .title
+    display: block
+    h2
+      color: $gray-dark
+  img
+    padding-bottom: 1em
+
 .slide-6
   background: asset-url("slide-4-bg.jpg") top center
   padding: 3em 0
@@ -176,25 +198,15 @@ p.lead
     +grid-column(12)
     margin-bottom: 1em
 
-.slide-5
-  background: $blue
-  padding: 2em 0 6em 0
-  .col
-    +grid-column(4)
-    .title, h2, p
-      +grid-column(12)
-      padding: 0
-    &.square
-      p
-        border: white 2px solid
-        padding: 1em
-        margin-bottom: 0
-  .title
-    display: block
-    h2
-      color: $gray-dark
-  img
-    padding-bottom: 1em
+.slide-8
+  background: asset-url("slide-8-bg.jpg") top center
+  padding: 10em 0
+  .title, .text
+    +grid-column(12)
+    text-align: center
+  .external_link
+    color: $yellow
+    font-size: 3em
 
 .close-reveal-modal
   text-decoration: none
