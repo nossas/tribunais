@@ -16,16 +16,13 @@
     .row
       .title
         h2 Você sabia que no Brasil você ainda pode ser julgado por um tribunal militar?
-        strong #DesmilitarizaçãodaJustiça
       .text
         p Apesar de vivermos em uma democracia,  qualquer cidadão civil pode virar reú da justiça militar, caso seja acusado de desacato ou outras formas de insubordinação contra membros das forças armadas.
+        p A boa notícia é que a Procuradoria Geral da República acaba de entrar com uma ação no Supremo Tribunal Federal para acabar com esse absurdo. E o voto do STF deve ocorrer ainda esse ano!
+        p Mas sabemos que os militares não querem abrir mão de seus privilégios, e já estão se movimentando para tentar influenciar os ministros do STF na semana do voto. É por isso que estamos unindo pessoas dispostas a orquestrar um contra-ataque.
         p
-          strong A boa notícia é que a Procuradoria Geral da República acaba de entrar com uma ação no Supremo Tribunal Federal para acabar com esse absurdo.
-          |  E o voto do STF deve ocorrer ainda esse ano!
-        p
-          strong Mas sabemos que os militares não querem abrir mão de seus privilégios, e já estão se movimentando para tentar influenciar os ministros do STF na semana do voto. É por isso que estamos unindo pessoas dispostas a orquestrar um contra-ataque.
-        p Juntos, vamos criar a maior mobilização pela desmilitarização da justiça que o Brasil já viu.
-        strong  Mobilizadores inscritos receberão um email na semana do voto com o plano da missão.
+          | Juntos, vamos criar a maior mobilização pela desmilitarização da justiça que o Brasil já viu. Mobilizadores inscritos receberão um email na semana do voto com o plano da missão para pressionar os ministros do STF nas ruas e nas redes. Venha fazer história junto com a gente!
+          span.hash  #DesmilitarizaçãodaJustiça
 
     .form_wraper
       .row
@@ -38,7 +35,7 @@
             .email_field
               = email_field_tag :email, nil, placeholder: "Insira seu email", required: true
             .submit_button
-              = form.submit "Inscreva-se agora", id: 'poke-submit-button', class: [:button, :radius]
+              = form.submit "Inscreva-se", id: 'poke-submit-button', class: [:button, :radius]
 
     .row
       .divider= image_tag("divider-blue.png")
@@ -104,37 +101,31 @@
     .text
       p Qualquer pessoa acusada de cometer crime contra militares ou instituições militares federais pode ser julgado por um Tribunal Militar da União, sem necessidade de validação de provas pela Justiça civil.
       p Com a ocupação militar de espaços urbanos, cidadãos convivem com abordagens truculentas de militares que se sentem protegidos por um sistema de Justiça no qual eles mesmos estão no comando.
-    .title.white
-      h2 Ocupações militares
+      p Exemplos de ocupações militares e outros contextos em que forças militares foram utilizadas dentro de espaços urbanos incluem:
   .row
     .ocup= image_tag("ocup-1.png")
     .ocup= image_tag("ocup-4.png")
     .ocup= image_tag("ocup-3.png")
     .ocup= image_tag("ocup-2.png")
-  .row
-    .title.white
-      h2 Outros contextos
-  .row
-    .ocup.fifth= image_tag("ocup-5.png")
+    .ocup= image_tag("ocup-5.png")
     .ocup= image_tag("ocup-6.png")
   .row
     .divider= image_tag("divider-dark.png")
 
 .slide-5
   .row
-    .col
-      .title
-        h2 A Justiça Militar só beneficia os militares
+    .title
+      h2 A Justiça Militar só beneficia os militares
+    .text
+      p Os julgamentos da Justiça Militar são feitos com base no Código Penal Militar e no Código de Processo Penal de Militar, ambos escritos em 1969, em plena Ditadura.
+  .row
+    .half-left
+      span "Os números são escandalosos. São indicativo de um verdadeiro descalabro financeiro"
       p
-        | Os julgamentos da Justiça Militar são feitos com base no
-        strong  Código Penal Militar e no Código de Processo Penal de Militar, ambos escritos em 1969, em plena Ditadura.
-    .col
-      = image_tag 'slide-5-square.png'
-      p Em 2013, o ex-ministro do STF Joaquim Barbosa questionou os custos da Justiça Militar brasileira.
-    .col.square
-      p
-        | Em 2012 o custo médio de um processo julgado na Justiça Militar da União foi
-        strong  55 vezes superior a um processo na Justiça Federal.
+        span.yellow Joaquim Barbosa
+        | , ex-ministro do STF que, em 2013, questionou os custos da Justiça Militar brasileira.
+    .half-right
+      .box Em 2012 o custo médio de um processo julgado na Justiça Militar da União foi 55 vezes superior a um processo na Justiça Federal.
   .row
     .divider= image_tag("divider-blue.png")
 

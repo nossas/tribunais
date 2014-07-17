@@ -87,6 +87,10 @@ p.lead
       font-size: inherit
       font-weight: bold
       display: inline
+    .hash
+      color: $yellow
+      font-weight: bold
+      font-size: 1.1em
   .counter
     +grid-column($columns: 7, $offset: 5)
     margin-bottom: 2em
@@ -162,36 +166,46 @@ p.lead
   .text
     margin-bottom: 2em
   .ocup
-    +grid-column(3)
+    +grid-column(4)
     text-align: center
-    height: 550px
+    height: 600px
     &.fifth
       +grid-column($columns: 3, $offset: 3)
 
 .slide-5
   background: $blue
   padding: 2em 0 2em 0
-  .col
-    +grid-column(4)
-    .title, h2, p
-      +grid-column(12)
-      padding: 0
-    &.square
-      p
-        border: white 2px solid
-        padding: 1em
-        margin-bottom: 0
-    strong
-      color: white
-      font-size: inherit
-      font-weight: bold
-      display: inline
+  text-align: center
   .title
-    display: block
+    +grid-column(12)
     h2
       color: $gray-dark
-  img
-    padding-bottom: 1em
+  .text
+    +grid-column(12)
+  .half-left, .half-right
+    +grid-column(6)
+  .half-left
+    padding-top: 30px
+    p
+      line-height: 1em
+    span
+      color: $gray-dark
+      font-size: 1.7em
+      font-weight: bold
+      margin-bottom: 1em
+      display: inline-block
+      &.yellow
+        color: $yellow
+        font-size: inherit
+        font-weight: bold
+        display: inline
+  .half-right
+    .box
+      background: none
+      border: 1px solid white
+      font-size: 1.20em
+      line-height: 1.5em
+      padding: 2.7em
 
 .slide-6
   background: asset-url("slide-4-bg.jpg") top center
@@ -242,6 +256,7 @@ p.lead
   border: none !important
 
 #share, #victory, #preview_email
+  text-align: center
   p, a.link
     color: #333
     &.phone
@@ -271,12 +286,9 @@ form
     &.error
       input
         border-color: red
-  .email_field, .last_name_field
+  .email_field, .last_name_field, .first_name_field, .submit_button
     +grid-column(3)
-  .first_name_field
-    +grid-column(2)
   .submit_button
-    +grid-column(4)
     input
       font-family: inherit
       padding: 5px
@@ -342,8 +354,8 @@ form
 
 @media (max-width: 750px)
   .slide-5
-    .col
-      +grid-column(10, $center: true)
+    .half-left, .half-right
+      +grid-column(12)
 
   form
     +grid-column(12, true, true)
