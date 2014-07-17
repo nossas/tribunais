@@ -1,6 +1,19 @@
 .slides-1-2
   .slide-1
     .row
+      - if Poke.count >= 100
+        .counter
+          .digits-and-text
+            .digits
+              - Poke.count.to_s.chars.each do |c|
+                span.digit= c
+            .counter-text
+              span
+                | Pessoas pedindo a
+                br
+                | desmilitarização da justiça
+    
+    .row
       .title
         h2 Você sabia que no Brasil você ainda pode ser julgado por um tribunal militar?
         strong #DesmilitarizaçãodaJustiça
@@ -43,7 +56,7 @@
 / .row.email_message
 /   .wraper
 /     = link_to "Quero ver o email que será enviado", "#preview_email", "data-reveal-id" => "preview_email", "data-reveal" => true
-/
+
 /   .row
 /     .wraper
 /       h2
@@ -53,7 +66,7 @@
 /       p Nas últimas duas semanas, oito homens foram presos em flagrante abusando de mulheres no transporte público em São Paulo. Só este ano, já foram denunciados 26 casos. Como se não bastasse a violência vivenciada pelos passageiros diariamente, o Metrô divulgou uma propaganda inaceitável, na qual - em meio a elogios ao governo do Estado -  dizia que "trem lotado é bom para xavecar mulher". Diante da imensa pressão dos paulistanos, a propaganda foi tirada do ar. Mas isso não é o bastante.
 /       p Em ano eleitoral, é tristemente comum que recursos públicos sejam usados para bancar propaganda de conteúdo essencialmente político. Mas esse ano, podemos mudar essa história. O furor causado pela propaganda desastrosa do Metrô nos dá uma oportunidade única: pressionar o Metrô a investir sua verba pública de comunicação na maior campanha de prevenção ao abuso sexual já feita em São Paulo. Vamos exigir uma campanha para informar as mulheres de que abuso sexual é crime, explicar claramente como proceder em caso de ocorrência, e mandar uma mensagem clara aos possíveis abusadores: não passarão!
 /       p.lead Preencha o formulário abaixo para mandar um email automático ao Presidente do Metrô, Luiz Antonio Carvalho Pacheco, exigindo que a verba de comunicação seja usada para campanhas de prevenção e combate ao abuso sexual.
-/
+
 / .slide-2
 /   .row
 /     .wraper
@@ -65,16 +78,28 @@
 /           span Escute a propaganda (mal)feita pelo Metrô:
 /         p.lead cuidado, conteúdo ofensivo
 /         iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/141696215&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_artwork=true"
-/
-/ .slide-3
-/   .row
-/     .title
-/       h2
-/         span Quem são os criadores dessa mobilização?
-/     .text
-/       p Essa mobilização foi criada por um grupo de cidadãos paulistanos (de certidão ou de coração) que acreditam na participação cidadã e na união de muitas pessoas como instrumento para criação de uma cidade melhor. Em breve, lançaremos o Minha Sampa, organização que será dedicada a fomentar uma rede de entusiastas de São Paulo que querem participar ativamente da construção de uma cidade mais inclusiva, participativa, e gostosa de se viver. Nessa empreitada, estamos sendo apoiados pela equipe do Meu Rio, que já faz um trabalho lindo no Rio de Janeiro.
-/       p Não tínhamos planejado lançar essa mobilização antes do Minha Sampa sair do forno. Mas resolvemos que não podíamos ficar calados. Primeiro, porque os casos de abuso sexual em espaços públicos são uma grande ameaça a um uso verdadeiramente democrático da cidade e sua infraestrutura, e, por isso, deveriam ser uma prioridade para todos aqueles que desejam uma São Paulo melhor. Segundo, porque acreditamos que recursos públicos podem e devem ser destinados a causas públicas. Verbas de comunicação costumam ser usadas para fins políticos eleitorais, e isso não é legal. Vemos nessa mobilização a oportunidade de envolver todos os paulistanos e paulistanas na definição de como os nossos recursos de comunicação são usados. E contamos com você. Envie seu email de pressão ao presidente do Metrô agora.
-/
+
+.slide-3
+  .row
+    .title
+      h2 Em todas as instâncias, militares da ativa controlam a decisão
+    .text
+      p
+        strong Passo 1:
+        | O cidadão é acusado de crime militar por um membro das forças armadas. Ele será julgado pela primeira instância da Justiça Militar da União.
+    .image= image_tag("step-1.jpg")
+
+    .text
+      p
+        strong Passo 2:
+        | Após sentença, a parte insatisfeita pode recorrer da decisão. Assim, o caso será analisado pelo Superior Tribunal Militar (STM).
+    .image= image_tag("step-2.jpg")
+
+    .text
+      p
+        strong Passo 3:
+        | Ao contrário da Justiça Federal, onde caberia mais um recurso para o STJ, na Justiça Militar da União a 2ª instância é o último momento possível do processo.
+
 #preview_email.small.reveal-modal{data-reveal=true}
   p
     strong Exmo(a). Sr(a). Ministro(a) do Supremo Tribunal Federal,
@@ -90,7 +115,7 @@
   p Precisamos unir forças e preparar uma mobilização histórica para pressionar os ministros do STF na semana do voto. Compartilhe essa página com pessoas que você acredita que gostariam de fazer parte dessa rede de mobilizadores.
   .share-buttons
     = link_to "Compartilhe no Facebook", "https://www.facebook.com/sharer/sharer.php?u=#{URI::encode(root_url)}", class: ["button", "facebook-share"]
-    = link_to "Compartilhe no Twitter", "https://twitter.com/share?url=#{URI::encode('http:bit.ly/nãopassarão')}&text=#{URI::encode(t('share.twitter.tweet'))}&hashtags=#{URI::encode('abusadoresnãopassarão')}", class: ["button", "twitter-share"]
+    = link_to "Compartilhe no Twitter", "https://twitter.com/share?url=#{URI::encode('http://bit.ly/desmilitarizacaodajustica')}&text=#{URI::encode(t('share.twitter.tweet'))}", class: ["button", "twitter-share"]
   a.close-reveal-modal &#215;
 /
 / #gandalf.medium.reveal-modal{data-reveal=true}
