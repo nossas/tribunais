@@ -74,6 +74,10 @@ p.lead
   padding: 2em 0
   background: $blue
   .title
+    +grid-column(4)
+  .text
+    +grid-column(8)
+  .title
     text-align: right
     h2
       margin-bottom: 1em
@@ -92,7 +96,7 @@ p.lead
       font-weight: bold
       font-size: 1.1em
   .counter
-    +grid-column($columns: 7, $offset: 5)
+    +grid-column($columns: 8, $offset: 4)
     margin-bottom: 2em
     .digits-and-text
       text-align: left
