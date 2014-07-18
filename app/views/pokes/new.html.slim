@@ -1,74 +1,82 @@
-.slides-1-2
-  .slide-1
+.slide-1
+  .row
+    .counter
+      .digits-and-text
+        .digits
+          - Poke.count.to_s.chars.each do |c|
+            span.digit= c
+        .counter-text
+          span
+            | Pessoas pedindo a
+            br
+            | desmilitarização da justiça
+
+  .row
+    .title
+      h2 Você sabia que no Brasil você ainda pode ser julgado por um tribunal militar?
+    .text
+      p Apesar de vivermos em uma democracia,  qualquer cidadão civil pode virar reú da justiça militar, caso seja acusado de desacato ou outras formas de insubordinação contra membros das forças armadas.
+      p A boa notícia é que a Procuradoria Geral da República acaba de entrar com uma ação no Supremo Tribunal Federal para acabar com esse absurdo. E o voto do STF deve ocorrer ainda esse ano!
+      p Mas sabemos que os militares não querem abrir mão de seus privilégios, e já estão se movimentando para tentar influenciar os ministros do STF na semana do voto. É por isso que estamos unindo pessoas dispostas a orquestrar um contra-ataque.
+      p
+        | Juntos, vamos criar a maior mobilização pela desmilitarização da justiça que o Brasil já viu. Mobilizadores inscritos receberão um email na semana do voto com o plano da missão para pressionar os ministros do STF nas ruas e nas redes. Venha fazer história junto com a gente!
+        span.hash  #DesmilitarizaçãodaJustiça
+
+  .form_wraper
     .row
-      .counter
-        .digits-and-text
-          .digits
-            - Poke.count.to_s.chars.each do |c|
-              span.digit= c
-          .counter-text
-            span
-              | Pessoas pedindo a
-              br
-              | desmilitarização da justiça
+      = form_for @poke, html: { "data-abide" => true } do |form|
+        .row
+          .first_name_field
+            = text_field_tag :first_name, nil, placeholder: "Insira seu nome", required: true
+          .last_name_field
+            = text_field_tag :last_name, nil, placeholder: "Insira seu sobrenome", required: true
+          .email_field
+            = email_field_tag :email, nil, placeholder: "Insira seu email", required: true
+          .submit_button
+            = form.submit "Inscreva-se", id: 'poke-submit-button', class: [:button, :radius]
+  .row
+    .divider= image_tag("divider-dark.png")
 
-    .row
-      .title
-        h2 Você sabia que no Brasil você ainda pode ser julgado por um tribunal militar?
-      .text
-        p Apesar de vivermos em uma democracia,  qualquer cidadão civil pode virar reú da justiça militar, caso seja acusado de desacato ou outras formas de insubordinação contra membros das forças armadas.
-        p A boa notícia é que a Procuradoria Geral da República acaba de entrar com uma ação no Supremo Tribunal Federal para acabar com esse absurdo. E o voto do STF deve ocorrer ainda esse ano!
-        p Mas sabemos que os militares não querem abrir mão de seus privilégios, e já estão se movimentando para tentar influenciar os ministros do STF na semana do voto. É por isso que estamos unindo pessoas dispostas a orquestrar um contra-ataque.
-        p
-          | Juntos, vamos criar a maior mobilização pela desmilitarização da justiça que o Brasil já viu. Mobilizadores inscritos receberão um email na semana do voto com o plano da missão para pressionar os ministros do STF nas ruas e nas redes. Venha fazer história junto com a gente!
-          span.hash  #DesmilitarizaçãodaJustiça
+.slide-1-5
+  .row
+    .title
+      h2 A justiça militar da união é...
+  .row
+    .feature
+      = image_tag("justice/unfair.png")
+      .feature_title Injusta
+      .feature_text Obedece a Códigos impostos em 1969, auge da Ditadura
+    .feature
+      = image_tag("justice/expensive.png")
+      .feature_title Cara
+      .feature_text O custo médio de cada processo é 55 vezes mais alto que na Justiça Federal
+    .feature
+      = image_tag("justice/unproductive.png")
+      .feature_title Improdutiva
+      .feature_text Cada juíz julga 47 processos por ano, contra 1.751 na Justiça Federal
+    .feature
+      = image_tag("justice/condemner.png")
+      .feature_title Feita para condenar
+      .feature_text A defesa só pode chamar 3 testemunhas; a acusação pode chamar até 6
+  .row
+    .divider= image_tag("divider-blue.png")
 
-    .form_wraper
-      .row
-        = form_for @poke, html: { "data-abide" => true } do |form|
-          .row
-            .first_name_field
-              = text_field_tag :first_name, nil, placeholder: "Insira seu nome", required: true
-            .last_name_field
-              = text_field_tag :last_name, nil, placeholder: "Insira seu sobrenome", required: true
-            .email_field
-              = email_field_tag :email, nil, placeholder: "Insira seu email", required: true
-            .submit_button
-              = form.submit "Inscreva-se", id: 'poke-submit-button', class: [:button, :radius]
+.slide-2
+  .row
+    .title
+      h2 HOJE, CIVIS PODEM SER CONDENADOS PELA JUSTIÇA MILITAR
+      strong História real: T. R, 26 anos, agredida por militares e condenada a 6 meses de prisão
+  .row
+    .text
+      p Complexo do Alemão, 2011. Era madrugada quando T.R, então com 22 anos, saiu de casa para ajudar seu vizinho, que gritava por socorro enquanto era colocado em um jipe por militares. Sem entender o que acontecia, ela pediu para falar com ele, mas recebeu em troca um tiro de borracha no pé esquerdo, 3 dedos quebrados, e uma prisão.
 
-    .row
-      .divider= image_tag("divider-blue.png")
+      p No hospital onde foi atendida naquele dia, T se recusou a assinar um papel em branco apresentado por um oficial militar. Teve voz de prisão e foi acusada de desacato e outros crimes.
 
-  .slide-2
-    .row
-      .title
-        h2 HOJE, CIVIS PODEM SER CONDENADOS PELA JUSTIÇA MILITAR
-        strong T. R, 26 anos, condenada a 6 meses de prisão pela Justiça Militar da União
-    .row
-      .text
-        p Complexo do Alemão, 2011. Era madrugada quando T.R, então com 22 anos, saiu de casa para ajudar seu vizinho, que gritava por socorro enquanto era colocado em um jipe por militares. Sem entender o que acontecia, ela pediu para falar com ele, mas recebeu em troca um tiro de borracha no pé esquerdo, 3 dedos quebrados, e uma prisão.
+      p T. foi condenada a 6 meses de prisão pela primeira instância da Justiça Militar da União, que usou testemunhos de militares do próprio grupamento que a agrediu. O Superior Tribunal Militar manteve a decisão, e T. cumpre pena em regime aberto.
 
-        p No hospital onde foi atendida naquele dia, T se recusou a assinar um papel em branco apresentado por um oficial militar. Teve voz de prisão e foi acusada de desacato e outros crimes.
-
-        p T. foi condenada a 6 meses de prisão pela primeira instância da Justiça Militar da União, que usou testemunhos de militares do próprio grupamento que a agrediu. O Superior Tribunal Militar manteve a decisão, e T. cumpre pena em regime aberto.
-
-        p Os militares envolvidos no caso não foram processados.
-    .row
-      .divider= image_tag("divider-dark.png")
-
-/ .row.email_message
-/   .wraper
-/     = link_to "Quero ver o email que será enviado", "#preview_email", "data-reveal-id" => "preview_email", "data-reveal" => true
-
-/   .row
-/     .wraper
-/       h2
-/         | Metrô de São Paulo, use sua verba de comunicação para conter abusos sexuais nos trens e estações!
-/         br
-/         span Abusadores NÃO PASSARÃO!
-/       p Nas últimas duas semanas, oito homens foram presos em flagrante abusando de mulheres no transporte público em São Paulo. Só este ano, já foram denunciados 26 casos. Como se não bastasse a violência vivenciada pelos passageiros diariamente, o Metrô divulgou uma propaganda inaceitável, na qual - em meio a elogios ao governo do Estado -  dizia que "trem lotado é bom para xavecar mulher". Diante da imensa pressão dos paulistanos, a propaganda foi tirada do ar. Mas isso não é o bastante.
-/       p Em ano eleitoral, é tristemente comum que recursos públicos sejam usados para bancar propaganda de conteúdo essencialmente político. Mas esse ano, podemos mudar essa história. O furor causado pela propaganda desastrosa do Metrô nos dá uma oportunidade única: pressionar o Metrô a investir sua verba pública de comunicação na maior campanha de prevenção ao abuso sexual já feita em São Paulo. Vamos exigir uma campanha para informar as mulheres de que abuso sexual é crime, explicar claramente como proceder em caso de ocorrência, e mandar uma mensagem clara aos possíveis abusadores: não passarão!
-/       p.lead Preencha o formulário abaixo para mandar um email automático ao Presidente do Metrô, Luiz Antonio Carvalho Pacheco, exigindo que a verba de comunicação seja usada para campanhas de prevenção e combate ao abuso sexual.
+      p Os militares envolvidos no caso não foram processados.
+  .row
+    .divider= image_tag("divider-dark.png")
 
 .slide-3
   .row
@@ -111,22 +119,22 @@
   .row
     .divider= image_tag("divider-dark.png")
 
-.slide-5
-  .row
-    .title
-      h2 A Justiça Militar só beneficia os militares
-    .text
-      p Os julgamentos da Justiça Militar são feitos com base no Código Penal Militar e no Código de Processo Penal de Militar, ambos escritos em 1969, em plena Ditadura.
-  .row
-    .half-left
-      span "Os números são escandalosos. São indicativo de um verdadeiro descalabro financeiro"
-      p
-        span.yellow Joaquim Barbosa
-        | , ex-ministro do STF que, em 2013, questionou os custos da Justiça Militar brasileira.
-    .half-right
-      .box Em 2012 o custo médio de um processo julgado na Justiça Militar da União foi 55 vezes superior a um processo na Justiça Federal.
-  .row
-    .divider= image_tag("divider-blue.png")
+/ .slide-5
+/   .row
+/     .title
+/       h2 A Justiça Militar só beneficia os militares
+/     .text
+/       p Os julgamentos da Justiça Militar são feitos com base no Código Penal Militar e no Código de Processo Penal de Militar, ambos escritos em 1969, em plena Ditadura.
+/   .row
+/     .half-left
+/       span "Os números são escandalosos. São indicativo de um verdadeiro descalabro financeiro"
+/       p
+/         span.yellow Joaquim Barbosa
+/         | , ex-ministro do STF que, em 2013, questionou os custos da Justiça Militar brasileira.
+/     .half-right
+/       .box Em 2012 o custo médio de um processo julgado na Justiça Militar da União foi 55 vezes superior a um processo na Justiça Federal.
+/   .row
+/     .divider= image_tag("divider-blue.png")
 
 .slide-6
   .row
@@ -139,38 +147,23 @@
         | A democracia é um processo em construção, e precisamos garantir que nossa voz será ouvida.
         strong  Inscreva-se agora e faça parte da missão pela desmilitarização da justiça!
   .row
-    .divider= image_tag("divider-dark.png")
+    .divider= image_tag("divider-blue.png")
 
 .slide-7
   .row
     .title
       h2 Quem são os criadores dessa mobilização?
-    .image= image_tag "partners.png"
-    .text
-      p A Rede Meu Rio existe para aproximar o cidadão da política carioca, mostrando que uma cidade boa pra todo mundo deve ser construída de forma democrática e inclusiva. O Rio de Janeiro é hoje uma das cidades brasileiras mais afetadas pela ocupação de forças militares no território, e por isso cidadãos cariocas são especialmente vulneráveis a acusações de desacato que podem ser julgadas por tribunais militares.
-      p Acreditamos que essa herança da Ditadura limita nossa capacidade de consolidar instituições democráticas, e por isso entramos na luta pela aprovação da ADPF 289.
-      p Além disso, estamos construindo essa mobilização junto com várias organizações de referência no tema. São elas:
-      p
-        strong Grupo Tortura Nunca Mais do Rio de Janeiro (GTNM/RJ)
-        | Movimento criado, a partir do declínio dos Comitês Brasileiros pela Anistia (CBA), em 1985 pelos ex-presos políticos, suas famílias e pessoas comprometidas com a luta pelos direitos humanos. O GTNM/RJ inclusive está participando ativamente do processo da ADPF 289, como amicus curiae, sendo representados pela Cliníca UERJ Direitos.
-      p
-        strong Movimento Direito Para Quem (DPQ)
-        | Coletivo de estudantes e profissionais que atuam na defesa dos direitos humanos e sociais.
-      p
-        strong Instituto de Defensores dos Direitos Humanos e Cidadania (DDH)
-        | Faz advocacia gratuita em casos de violações à direitos fundamentais, além de desenvolver programas de promoção e defesa ds direitos humanos desde 2007.
-      p
-        strong Coletivo Papo Reto
-        | Um coletivo de comunicação independente oriundo do Complexo do Alemão. O principal objetivo do grupo é realizar a comunicação em suas mais variadas vertentes de maneira que a população favelada seja protagonista e/ou se veja representada plenamente no conteúdo publicado.
   .row
-    .divider= image_tag("divider-blue.png")
-
-.slide-8
+    .partner= link_to image_tag("partners/meurio.png"), "http://www.meurio.org.br", target: "_blank"
+    .partner= link_to image_tag("partners/gtnm.png"), "http://www.torturanuncamais-rj.org.br/", target: "_blank"
+    .partner= link_to image_tag("partners/dpq.png"), "https://www.facebook.com/direitoparaquem", target: "_blank"
+    .partner= link_to image_tag("partners/ddh.png"), "http://ddh.org.br/", target: "_blank"
+    .partner= link_to image_tag("partners/paporeto.png"), "https://www.facebook.com/ColetivoPapoReto", target: "_blank"
   .row
-    .title
-      h2 Quer saber mais?
     .text
-      p= link_to 'clique aqui para consultar as fontes', 'https://docs.google.com/a/meurio.org.br/document/d/1lywMzXzG4LMRLdjbysB9IoHqeflKQnyqKf8CBi6UiSA', target: :blank, class: :external_link
+      p
+        | Quer saber mais?
+        = link_to 'Clique aqui para consultar as fontes', 'https://docs.google.com/a/meurio.org.br/document/d/1lywMzXzG4LMRLdjbysB9IoHqeflKQnyqKf8CBi6UiSA', target: :blank, class: :external_link
 
 
 #preview_email.small.reveal-modal{data-reveal=true}
@@ -215,3 +208,17 @@
 /
 /   = link_to "CURTA A GENTE NO FACE AGORA", "http://www.facebook.com/MinhaSampa", target: :blank, class: ["button", "facebook-link"]
 /   a.close-reveal-modal &#215;
+
+/ .row.email_message
+/   .wraper
+/     = link_to "Quero ver o email que será enviado", "#preview_email", "data-reveal-id" => "preview_email", "data-reveal" => true
+
+/   .row
+/     .wraper
+/       h2
+/         | Metrô de São Paulo, use sua verba de comunicação para conter abusos sexuais nos trens e estações!
+/         br
+/         span Abusadores NÃO PASSARÃO!
+/       p Nas últimas duas semanas, oito homens foram presos em flagrante abusando de mulheres no transporte público em São Paulo. Só este ano, já foram denunciados 26 casos. Como se não bastasse a violência vivenciada pelos passageiros diariamente, o Metrô divulgou uma propaganda inaceitável, na qual - em meio a elogios ao governo do Estado -  dizia que "trem lotado é bom para xavecar mulher". Diante da imensa pressão dos paulistanos, a propaganda foi tirada do ar. Mas isso não é o bastante.
+/       p Em ano eleitoral, é tristemente comum que recursos públicos sejam usados para bancar propaganda de conteúdo essencialmente político. Mas esse ano, podemos mudar essa história. O furor causado pela propaganda desastrosa do Metrô nos dá uma oportunidade única: pressionar o Metrô a investir sua verba pública de comunicação na maior campanha de prevenção ao abuso sexual já feita em São Paulo. Vamos exigir uma campanha para informar as mulheres de que abuso sexual é crime, explicar claramente como proceder em caso de ocorrência, e mandar uma mensagem clara aos possíveis abusadores: não passarão!
+/       p.lead Preencha o formulário abaixo para mandar um email automático ao Presidente do Metrô, Luiz Antonio Carvalho Pacheco, exigindo que a verba de comunicação seja usada para campanhas de prevenção e combate ao abuso sexual.

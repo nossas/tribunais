@@ -20,8 +20,6 @@ a
   color: white
   text-decoration: underline
   font-weight: bold
-  &.external_link
-    font-family: "Garage Gothic"
 
 strong
   display: inline-block
@@ -72,7 +70,7 @@ p.lead
 
 .slide-1
   padding: 2em 0
-  background: $blue
+  background: asset-url("slide-1-2-bg.jpg") top center
   .title
     +grid-column(4)
   .text
@@ -81,7 +79,7 @@ p.lead
     text-align: right
     h2
       margin-bottom: 1em
-      color: $gray-dark
+      color: $blue
   .email_message
     text-align: right
   .text
@@ -127,7 +125,30 @@ p.lead
           position: relative
           top: 3px
 
+.slide-1-5
+  background: $blue
+  padding: 4em 0
+  .title
+    +grid-column(12)
+    text-align: center
+    margin-bottom: 1.5em
+    h2
+      color: $gray-dark
+  .feature
+    +grid-column(3)
+    text-align: center
+    img
+      margin-bottom: 1em
+    .feature_title
+      color: $gray-dark
+      font-size: 1.3em
+      font-weight: bold
+      margin-bottom: .5em
+    .feature_text
+      font-size: 1.1em
+
 .slide-2
+  background: asset-url("slide-3-bg.jpg") center top
   padding: 2em 0
   .title
     strong
@@ -212,10 +233,12 @@ p.lead
       padding: 2.7em
 
 .slide-6
-  background: asset-url("slide-4-bg.jpg") top center
+  background: $blue
   padding: 3em 0
   .title
     text-align: right
+    h2
+      color: $gray-dark
   .text
     strong
       color: white
@@ -224,23 +247,27 @@ p.lead
       display: inline
 
 .slide-7
-  background: $blue
-  padding: 2em 0
+  background: $green
+  padding: 3em 0
   .title, .text
     text-align: center
   .title
     +grid-column(12)
+    margin-bottom: 2em
     h2
-      color: $gray-dark
+      color: white
   .text
     +grid-column($columns: 12)
-    strong
+    a
+      font-size: 1.1em
       display: block
-      color: white
-      line-height: 1em
-  .image
-    +grid-column(12)
-    margin-bottom: 1em
+      color: $yellow
+  .partner
+    +grid-column(2)
+    text-align: center
+    height: 200px
+    &:first-child
+      +grid-column($columns: 2, $offset: 1)
 
 .slide-8
   background: asset-url("slide-8-bg.jpg") top center
@@ -333,6 +360,11 @@ form
       &.fifth
         +grid-column($columns: 6, $offset: 0)
 
+  .slide-1-5
+    .feature
+      +grid-column($columns: 6)
+      margin-bottom: 2em
+
   .slide-5
     .col
       +grid-column(8, $center: true)
@@ -343,11 +375,9 @@ form
       text-align: left
 
   .slide-7
-    img
-      display: none
     .title, .text
       +grid-column(12)
-      text-align: left
+      text-align: center
 
   #share
     .facebook-share
@@ -372,6 +402,12 @@ form
     .first_name_field, .last_name_field, .email_field
       margin-bottom: 1em
 
+  .slide-7
+    .partner
+      +grid-column($columns: 12, $offset: 0)
+      &:first-child
+        +grid-column($columns: 12, $offset: 0)
+
 @media (max-width: 500px)
   .slide-5
     .col
@@ -386,3 +422,10 @@ form
       height: auto
       &.fifth
         +grid-column($columns: 12)
+
+  .slide-1-5
+    .feature
+      +grid-column($columns: 12)
+      margin-bottom: 2em
+      .feature_text
+        padding: 0 2em

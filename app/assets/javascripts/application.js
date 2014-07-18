@@ -72,6 +72,6 @@ $(function(){
     slide1Position = (slide1Offset * slide1ScrollRatio) + "px";
 
     $(".slide-1").css("background-position", "center " + slide1Position);
-    $(".slide-2").css("background-position", scrollProgress + " 40%");
+    // $(".slide-2").css("background-position", scrollProgress + " 40%");
   });
 });
